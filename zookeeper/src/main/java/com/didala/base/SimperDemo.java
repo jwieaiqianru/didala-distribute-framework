@@ -20,7 +20,7 @@ public class SimperDemo {
 
 
     public static void createZnode(CuratorFramework curatorFramework) throws Exception {
-        curatorFramework.create().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT).forPath("/create/create1", "jiangwei".getBytes());
+        curatorFramework.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL_SEQUENTIAL).forPath("/eph_seq", "jiangwei".getBytes());
     }
 
 }
